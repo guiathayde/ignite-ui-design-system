@@ -11,11 +11,11 @@ const config = {
     name: '@storybook/react-vite',
     options: {},
   },
+  features: {
+    storyStoreV7: true,
+  },
   core: {
     builder: '@storybook/builder-vite',
-  },
-  docs: {
-    autodocs: 'tag',
   },
   viteFinal: (config, { configType }) => {
     if (configType === 'PRODUCTION') {
