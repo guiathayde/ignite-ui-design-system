@@ -1,5 +1,4 @@
 name: Deploy docs
-
 on:
   push:
     branches:
@@ -20,6 +19,9 @@ jobs:
       - run: npm ci
 
       - run: npm run build
+        env:
+          TURBO_TOKEN: JOeXX2Nlv1jXrpM3fAhlSa0l
+          TURBO_TEAM: guiga303
 
       - name: Deploy storybook
         working-directory: ./packages/docs
